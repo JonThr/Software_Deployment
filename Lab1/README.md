@@ -31,8 +31,8 @@ Use the resource group you have created. Give a name to the deployment so you ca
 az deployment group create --name mydeployment --resource-group myResourceGroup --template-file azuredeploy.json --parameters azuredeploy.parameters.json
 ```
 ## References
-https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli
-https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/syntax#parameters
-https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template
-https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/parameter-files
+https://learn.microsoft.com/en-us/cli/azure/install-azure-cli-windows?tabs=azure-cli<br>
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/syntax#parameters<br>
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/template-tutorial-create-first-template<br>
+https://learn.microsoft.com/en-us/azure/azure-resource-manager/templates/parameter-files<br>
 
