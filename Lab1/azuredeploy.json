@@ -44,7 +44,7 @@
         },
         "linuxFxVersion": {
           "type": "string",
-          "defaultValue": "php|7.0",
+          "defaultValue": "NODE|10.15",
           "metadata": {
             "description": "The Runtime stack of current web app"
           }
