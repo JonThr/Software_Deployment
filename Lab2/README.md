@@ -78,7 +78,7 @@ A commit to the main branch of this repository will trigger a new release. The p
 </p>
 
 ## References
-https://expressjs.com/en/starter/installing.html
-https://www.youtube.com/watch?v=BAFCiiOAXB8
-https://learn.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser
-https://learn.microsoft.com/en-us/azure/devops/pipelines/release/triggers?view=azure-devops#release-triggers
+https://expressjs.com/en/starter/installing.html<br>
+https://www.youtube.com/watch?v=BAFCiiOAXB8<br>
+https://learn.microsoft.com/en-us/azure/devops/pipelines/create-first-pipeline?view=azure-devops&tabs=java%2Ctfs-2018-2%2Cbrowser<br>
+https://learn.microsoft.com/en-us/azure/devops/pipelines/release/triggers?view=azure-devops#release-triggers<br>
