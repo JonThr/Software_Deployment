@@ -42,7 +42,7 @@ The following screenshot shows the __integration of the app in Azure Application
 </p>
 
 <p align="center">
-<img src="./Screenshots/JonThrLab2-dev Application Insights.png">
+<img src="./Screenshots/JonThrLab2-release Application Insights.png">
 </p>
 
 ## Experience
