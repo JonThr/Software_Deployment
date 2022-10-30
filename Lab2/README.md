@@ -50,31 +50,31 @@ First of all, creating a new release pipeline made some problems, because the dr
 
 I struggled also with the deployment of the app. The deployment was successful, but the websites for development and production were not working. The error message on both websites was "*:( Application Error*". The solution was to create no folders in the repository, where the files are located. For example:
 
-**Example 1**
-.               
-├── Application              
-│   ├── app.js
-│   ├── package.json
-│   └── ...  
-└── README.&#8204;md
+**Example 1**  
+
+    .               
+    ├── Application              
+    │   ├── app.js
+    │   ├── package.json
+    │   └── ... 
+    └── README.md
+    
 The above structure **did not work** for my webapp deployment. 
 
 **Example 2**
-.                
-├── app.js             
-├── package.json            
-├── README.&#8204;md  
-└── ...  
+
+    .                
+    ├── app.js             
+    ├── package.json            
+    ├── README.md  
+    └── ...  
+    
 The above structure **worked** for my webapp deployment. 
 
 ## Release documentation
 A commit to the main branch of this repository will trigger a new release. The pipeline will build the app. After that the pipeline will run the tests and if all tests pass, an approver must approve this changes. If the approver approves, the app will be deployed. If the approver rejects, the app will not be deployed.
 <p align="center">
-<img src="./Screenshots/Approval (pending)">
-</p>
-
-<p align="center">
-<img src="./Screenshots/Approval (approved)">
+<img src="./Screenshots/Release.png">
 </p>
 
 ## References
