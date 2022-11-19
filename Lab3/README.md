@@ -59,8 +59,8 @@ volumes:
   db_data:
 ```
 
-   > **Note**: The docker volumes `db_data` and `wordpress_data` persists updates made by WordPress
-   to the database, as well as the installed themes and plugins. 
+   > **Note**: The docker volumes `db_data` persists updates made by WordPress
+   to the database.
 
 
 ### Build the project
