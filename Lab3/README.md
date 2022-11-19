@@ -1,6 +1,6 @@
 # Lab 3
 
-## Teil1
+## Part 1
 
 This guide demonstrates how to use Docker-Compose to set up and run WordPress and MySQL images. Before starting, make sure you have [Docker-Compose installed](https://docs.docker.com/compose/install/).
 
@@ -59,9 +59,7 @@ volumes:
   db_data:
 ```
 
-   > **Notes**:
-   >
-   * The docker volumes `db_data` and `wordpress_data` persists updates made by WordPress
+   > **Note**: The docker volumes `db_data` and `wordpress_data` persists updates made by WordPress
    to the database, as well as the installed themes and plugins. 
 
 
@@ -94,7 +92,7 @@ network, and the WordPress database.
 </details>
 
 ## Expierence
-### Teil 1
+### Part 1
 After using `docker compose up -d` I got an error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:80 -> 0.0.0.0:0: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions. The solution was to change the ports in the `docker-compose.yml` file.
 
 
