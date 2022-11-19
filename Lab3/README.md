@@ -59,7 +59,7 @@ volumes:
   db_data:
 ```
 
-   > **Note**: The docker volumes `db_data` persists updates made by WordPress
+   > **Note**: The docker volume `db_data` persists updates made by WordPress
    to the database.
 
 
