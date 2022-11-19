@@ -90,7 +90,7 @@ network, and the WordPress database.
 
 * [Quickstart: Compose and WordPress](https://github.com/docker/awesome-compose/tree/master/official-documentation-samples/wordpress)
 * [Install Docker Compose](https://www.youtube.com/watch?v=Vxf3qtk1qIA)
-* [Wordpress & Docker] (https://gist.github.com/bradtraversy/faa8de544c62eef3f31de406982f1d42)
+* [Wordpress & Docker](https://gist.github.com/bradtraversy/faa8de544c62eef3f31de406982f1d42)
 </details>
 
 ## Expierence
