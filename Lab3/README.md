@@ -79,6 +79,14 @@ browser.
 
 > **Note**: If you get the error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:80 -> 0.0.0.0:0: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions then change the ports in the docker-compose.yml file.
 
+<p align="center">
+<img src="./Screenshots/Teil1_1.PNG">
+</p>
+
+<p align="center">
+<img src="./Screenshots/Teil1_2.PNG">
+</p>
+
 ### Shutdown and cleanup
 
 The command `docker compose down` removes the
@@ -279,6 +287,26 @@ and now you can open [http://localhost:8080/wordpress](http://localhost:8080/wor
 browser. 
 
 > **Note**: If you get the error response from daemon: Ports are not available: exposing port TCP 0.0.0.0:80 -> 0.0.0.0:0: listen tcp 0.0.0.0:80: bind: An attempt was made to access a socket in a way forbidden by its access permissions then change the ports in the docker-compose.yml file.
+
+<p align="center">
+<img src="./Screenshots/Teil2_1.PNG">
+</p>
+
+<p align="center">
+<img src="./Screenshots/Teil2_2.PNG">
+</p>
+
+<p align="center">
+<img src="./Screenshots/Teil2_3.PNG">
+</p>
+
+<p align="center">
+<img src="./Screenshots/Teil2_4.PNG">
+</p>
+
+<p align="center">
+<img src="./Screenshots/Teil2_5.PNG">
+</p>
 
 ### Shutdown and cleanup
 
