@@ -13,7 +13,7 @@ To start working with Azure CLI, sign in with your Azure credentials.
 ```console
 az login
 ```
-> **Note**
+> **Note** <br>
 > If you have multiple Azure subscriptions, you can use `az account set --subscription SubscriptionName`. Choose the subscription you want to use and replace SubscriptionName with your subscription name. You can also use your subscription ID instead of your subscription name. 
 
 ## Verify Azure resource providers
@@ -23,7 +23,7 @@ Verify _Microsoft.OperationsManagement_ and _Microsoft.OperationalInsights_ prov
 az provider show -n Microsoft.OperationsManagement -o table
 az provider show -n Microsoft.OperationalInsights -o table
 ```
-> **Note**
+> **Note** <br>
 > If they are not registered, register _Microsoft.OperationsManagement_ and _Microsoft.OperationalInsights_ using the following commands: `az provider register --namespace Microsoft.OperationsManagement` and `az provider register --namespace Microsoft.OperationalInsights`
 
 ## Create resource group
@@ -39,7 +39,7 @@ Now, create an AKS cluster using `az aks create` with the `--enable-addons monit
 ```console
 az aks create -g myResourceGroup -n myAKSCluster --enable-managed-identity --node-count 1 --enable-addons monitoring --enable-msi-auth-for-monitoring  --generate-ssh-keys
 ```
-> **Note**
+> **Note** <br>
 > After a few minutes, the command completes and returns JSON-formatted information about the cluster.
 
 ## Connect to the cluster
@@ -49,7 +49,7 @@ To manage a Kubernetes cluster, use the Kubernetes command-line client`kubectl`.
     ```console
 	az aks install-cli
     ```
-	> **Note**
+	> **Note** <br>
 	> If you get the error response from the console: Please add "PATH\.azure-kubelogin" to your search PATH so the `kubelogin.exe` can be found. You have to follow the instructions of the console.
 
 2. Configure `kubectl` to connect to your Kubernetes cluster. The following command can be used: 	
@@ -212,7 +212,7 @@ To deploy WordPress and MySQL, two manifest files must be created:
 	```console
 	kubectl create secret generic mysql-pass --from-literal=password=YOURPASSWORDHERE
 	```	
-	> **Note**
+	> **Note** <br>
 	> The secret is now created. To ensure it was created you can run the `kubectl get secrets` command.
 
 4. Change to your directory, where you created the `mysql-deployment.yaml` and `wordpress-deployment.yaml` file. 
@@ -221,10 +221,10 @@ To deploy WordPress and MySQL, two manifest files must be created:
 	```console
 	kubectl apply -f mysql-deployment.yaml
 	```	
-	> **Note**
+	> **Note** <br>
 	> You could also use `kubectl create mysql-deployment.yaml`instead of apply to create the MySQL pod 		and service.  `kubectl apply` essentially equals to `kubectl create` + `kubectl replace`. In order to update an object after it has been created using `kubectl create` you would need to run `kubectl replace`.
 	
-	> **Tip**
+	> **Tip** <br>
 	> You can check to ensure the persistent volume was created by running the `kubectl get pvc` command. You can also run `kubectl get pods` to verify that the MySQL pod is running.
 	
 6. Next create the WordPress Pod and service by running the following command:
@@ -232,14 +232,14 @@ To deploy WordPress and MySQL, two manifest files must be created:
 	kubectl apply -f wordpress-deployment.yaml
 	```	
 	
-	> **Tip**
+	> **Tip** <br>
 	> You can check to ensure the persistent volume was created by running the `kubectl get pvc` command. 
 
 In order to see that the services are running properly and find out the external IP you can run the following command:
 ```console
 kubectl get services
 ```
-> **Note**
+> **Note** <br>
 > To see just the WordPress service, you can use `kubectl get services wordpress`.
 
 ## Bring up WordPress in a web browser
@@ -256,7 +256,7 @@ At this point, WordPress should be running. Now you can open the external IP in 
 
 ## Start AKS cluster
 
-> **Warning**
+> **Warning** <br>
 > Running an Azure Kubernetes Service cluster is not free! To avoid Azure charges, stop or delete unnecessary resources. Use the  `az aks stop` or the `az group delete` command.
 
 You can use the `az aks start` command to start a stopped AKS cluster. The following example starts a cluster named _myAKSCluster_:
@@ -264,7 +264,7 @@ You can use the `az aks start` command to start a stopped AKS cluster. The follo
 az aks start --name myAKSCluster --resource-group myResourceGroup
 ```
 
->**Note**
+>**Note** <br>
 > You can verify when your cluster has started by using the `az aks show` command. The `powerState` should show `Running`.  If the `provisioningState` shows `Starting` that means your cluster hasn't fully started yet.
 
 ## Stop AKS cluster
