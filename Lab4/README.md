@@ -242,10 +242,6 @@ kubectl get services
 > **Note**
 > To see just the WordPress service, you can use `kubectl get services wordpress`.
 
-7. Run the following command to get the IP Address for the WordPress Service:
-```console
-minikube service wordpress --url
-```
 ## Bring up WordPress in a web browser
 
 At this point, WordPress should be running. Now you can open the external IP in a web browser.
