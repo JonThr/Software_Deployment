@@ -235,12 +235,12 @@ To deploy WordPress and MySQL, two manifest files must be created:
 	> **Tip** <br>
 	> You can check to ensure the persistent volume was created by running the `kubectl get pvc` command. 
 
-In order to see that the services are running properly and find out the external IP you can run the following command:
-```console
-kubectl get services
-```
-> **Note** <br>
-> To see just the WordPress service, you can use `kubectl get services wordpress`.
+7. In order to see that the services are running properly and find out the external IP you can run the following command:
+	```console
+	kubectl get services
+	```
+	> **Note** <br>
+	> To see just the WordPress service, you can use `kubectl get services wordpress`.
 
 ## Bring up WordPress in a web browser
 
