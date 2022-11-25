@@ -71,70 +71,70 @@ To deploy WordPress and MySQL, two manifest files must be created:
 1. Create the `mysql-deployment.yaml` file. The following manifest describes a single-instance MySQL Deployment.
 	```yaml
 	apiVersion: v1
-		kind: Service
-		metadata:
-		  name: wordpress-mysql
-		  labels:
-		    app: wordpress
-		spec:
-		  ports:
-		    - port: 3306
-		  selector:
-		    app: wordpress
-		    tier: mysql
-		  clusterIP: None
-		---
-		apiVersion: v1
-		kind: PersistentVolumeClaim
-		metadata:
-		  name: mysql-pv-claim
-		  labels:
-		    app: wordpress
-		spec:
-		  accessModes:
-		    - ReadWriteOnce
-		  resources:
-		    requests:
-		      storage: 20Gi
-		---
-		apiVersion: apps/v1
-		kind: Deployment
-		metadata:
-		  name: wordpress-mysql
-		  labels:
-		    app: wordpress
-		spec:
-		  selector:
-		    matchLabels:
-		      app: wordpress
-		      tier: mysql
-		  strategy:
-		    type: Recreate
-		  template:
-		    metadata:
-		      labels:
-		        app: wordpress
-		        tier: mysql
-		    spec:
-		      containers:
-		      - image: mysql:5.6
-		        name: mysql
-		        env:
-		        - name: MYSQL_ROOT_PASSWORD
-		          valueFrom:
-		            secretKeyRef:
-		              name: mysql-pass
-		              key: password
-		        ports:
-		        - containerPort: 3306
-		          name: mysql
-		        volumeMounts:
-		        - name: mysql-persistent-storage
-		          mountPath: /var/lib/mysql
-		      volumes:
-		      - name: mysql-persistent-storage
-		        persistentVolumeClaim:
-		          claimName: mysql-pv-claim
+	kind: Service
+	metadata:
+	  name: wordpress-mysql
+	  labels:
+	    app: wordpress
+	spec:
+	  ports:
+	    - port: 3306
+	  selector:
+	    app: wordpress
+	    tier: mysql
+	  clusterIP: None
+	---
+	apiVersion: v1
+	kind: PersistentVolumeClaim
+	metadata:
+	  name: mysql-pv-claim
+	  labels:
+	    app: wordpress
+	spec:
+	  accessModes:
+	    - ReadWriteOnce
+	  resources:
+	    requests:
+	      storage: 20Gi
+	---
+	apiVersion: apps/v1
+	kind: Deployment
+	metadata:
+	  name: wordpress-mysql
+	  labels:
+	    app: wordpress
+	spec:
+	  selector:
+	    matchLabels:
+	      app: wordpress
+	      tier: mysql
+	  strategy:
+	    type: Recreate
+	  template:
+	    metadata:
+	      labels:
+	        app: wordpress
+	        tier: mysql
+	    spec:
+	      containers:
+	      - image: mysql:5.6
+	        name: mysql
+	        env:
+	        - name: MYSQL_ROOT_PASSWORD
+	          valueFrom:
+	            secretKeyRef:
+	              name: mysql-pass
+	              key: password
+	        ports:
+	        - containerPort: 3306
+	          name: mysql
+	        volumeMounts:
+	        - name: mysql-persistent-storage
+	          mountPath: /var/lib/mysql
+	      volumes:
+	      - name: mysql-persistent-storage
+	        persistentVolumeClaim:
+	          claimName: mysql-pv-claim
 	```
 	          
 2. Create the `wordpress-deployment.yaml`  file. The following manifest describes a single-instance WordPress Deployment.
@@ -251,11 +251,11 @@ minikube service wordpress --url
 At this point, WordPress should be running. Now you can open the external IP in a web browser.
 
 <p align="center">
-<img src="./Screenshots/WordPress_Install1.png">
+<img src="./Screenshots/WordPress_Install1.PNG">
 </p>
 
 <p align="center">
-<img src="./Screenshots/WordPress_Install2.png">
+<img src="./Screenshots/WordPress_Install2.PNG">
 </p>
 
 ## Start AKS cluster
